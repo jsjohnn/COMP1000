@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{F2AF6092-86FD-4119-A3A7-03B34CCC7EBF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment1/BigNumberCalculator.cs">
+    <Files>
+      <File FileName="Assignment1/Program.cs" Line="63" Column="1" />
+      <File FileName="Assignment1/BigNumberCalculator.cs" Line="157" Column="17" />
+      <File FileName="Assignment1/EMode.cs" Line="7" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment1" expanded="True">
+            <Node name="Assignment1" expanded="True">
+              <Node name="BigNumberCalculator.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>TwoComplement</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assignment1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
