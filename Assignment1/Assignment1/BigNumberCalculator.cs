@@ -206,13 +206,79 @@ namespace Assignment1
 
         public static string ToHexOrNull(string num)
         {
+            if (string.IsNullOrEmpty(num) || num[0] == '+' || num == "-0")
+            {
+                return null;
+            }
+
+            string notation = "";
+            if (num.Length > 1)
+            {
+                notation = num.Substring(0, 2);
+            }
+
+            if (notation == "0x")
+            {
+                if (num.Length < 3)
+                {
+                    return null;
+                }
+
+                int hexValueLength = num.Length - 2;
+                string hexValueForCheck = num.Substring(2, hexValueLength);
+
+                for (int i = 0; i < hexValueLength; ++i)
+                {
+                    if (!(hexValueForCheck[i] >= 48 && hexValueForCheck[i] <= 57
+                        || hexValueForCheck[i] >= 65 && hexValueForCheck[i] <= 70))
+                    {
+                        return null;
+                    }
+                }
+                return num;
+
+            }
 
             return null;
         }
 
         public static string ToDecimalOrNull(string num)
         {
-            return null;
+            if (string.IsNullOrEmpty(num) || num[0] == '+' || num == "-0")
+            {
+                return null;
+            }
+
+            string notation = "";
+            if (num.Length > 1)
+            {
+                notation = num.Substring(0, 2);
+            }
+
+            if (notation == "0b")
+            {
+                return null;
+            }
+            else if (notation == "0x")
+            {
+                return null;
+            }
+            else
+            {
+                if (num[0] == '0' && num.Length > 1)
+                {
+                    return null;
+                }
+
+                long decimalValue;
+
+                if (!long.TryParse(num, out decimalValue))
+                {
+                    return null;
+                }
+
+                return num;
+            }
         }
 
         public string AddOrNull(string num1, string num2, out bool bOverflow)

@@ -146,17 +146,17 @@ namespace Assignment1
             Debug.Assert(BigNumberCalculator.ToBinaryOrNull("16") == "0b010000");
             Debug.Assert(BigNumberCalculator.ToBinaryOrNull("32") == "0b0100000");
             Console.WriteLine(BigNumberCalculator.ToBinaryOrNull("-1"));
-            //Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-1") == "0b1");
+            Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-1") == "0b1");
             Console.WriteLine(BigNumberCalculator.ToBinaryOrNull("-2"));
-            //Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-2") == "0b10");
+            Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-2") == "0b10");
             Console.WriteLine(BigNumberCalculator.ToBinaryOrNull("-4"));
-            //Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-4") == "0b100");
+            Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-4") == "0b100");
             Console.WriteLine(BigNumberCalculator.ToBinaryOrNull("-8"));
-            //Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-8") == "0b1000");
+            Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-8") == "0b1000");
             Console.WriteLine(BigNumberCalculator.ToBinaryOrNull("-16"));
-            //Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-16") == "0b10000");
+            Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-16") == "0b10000");
             Console.WriteLine(BigNumberCalculator.ToBinaryOrNull("-32"));
-            //Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-32") == "0b100000");
+            Debug.Assert(BigNumberCalculator.ToBinaryOrNull("-32") == "0b100000");
 
         }
     }
