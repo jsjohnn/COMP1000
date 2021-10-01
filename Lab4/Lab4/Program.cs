@@ -150,7 +150,7 @@ namespace Lab4
 
             set1.Add("d");
             set1.Add("d");
-            set1.Add("h");
+            set1.Add("d");
             set1.Add("l"); // set1: { d, d, h, l }
 
             set2.Add("d");
@@ -165,9 +165,6 @@ namespace Lab4
             {
                 Console.WriteLine(i + "");
             }
-
-
-
 
         }
         public static void EqualList(List<string> expectedList, List<string> list)

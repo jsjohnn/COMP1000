@@ -62,9 +62,6 @@ namespace Lab4
         {
             MultiSet union = new MultiSet();
 
-            // other = {d,d,h,l}
-            // Sets = {}
-
             foreach (var set in Sets)
             {
                 union.Add(set);
@@ -75,6 +72,9 @@ namespace Lab4
                 if (!union.Sets.Contains(set))
                 {
                     union.Add(set);
+                }
+                else
+                {
                     continue;
                 }
 
