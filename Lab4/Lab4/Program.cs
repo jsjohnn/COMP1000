@@ -10,29 +10,6 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            //MultiSet set = new MultiSet();
-
-            //set.Add("a");
-            //set.Add("b");
-            //set.Add("a");
-
-            //List<MultiSet> powersetList = set.FindPowerSet();
-            //// powersetList:
-            //// { }
-            //// { a }
-            //// { a, a }
-            //// { a, a, b }
-            //// { a, b }
-            //// { b }
-
-            //foreach (var i in powersetList)
-            //{
-            //    foreach (var j in i.Sets)
-            //    {
-            //        Console.Write(j);
-            //    }
-            //    Console.WriteLine();
-
 
             //List<string> test = new List<string>();
 
@@ -54,54 +31,79 @@ namespace Lab4
             //Console.WriteLine(magicString);
 
             MultiSet set1 = new MultiSet();
-            MultiSet set2 = new MultiSet();
-            MultiSet set3 = new MultiSet();
-
-
             set1.Add("a");
+            set1.Add("b");
             set1.Add("a");
-            set1.Add("a");
-            set1.Add("b"); //{a,a,a,b}
 
-            set2.Add("a");
-            set2.Add("a");
-            set2.Add("b");
-            set2.Add("c"); //{a,a,b,c}
+            List<MultiSet> powersets = set1.FindPowerSet();
 
-
-            MultiSet union = set3.Union(set1); // {a,a,a,b,c}
-
-            foreach (var i in union.Sets)
+            foreach (var powerset in powersets)
             {
-                Console.WriteLine(i + "");
+                Console.WriteLine(string.Join(',', powerset.Sets));
             }
 
+            //List<int> number = new List<int>();
+            //number.Add(4);
+            //number.Add(2);
+            //number.Add(3);
+            //number.Add(5);
+            //number.Add(1);
 
+
+            //Console.WriteLine(string.Join(',', number));
+
+
+
+            #region Union Test
+            //MultiSet set1 = new MultiSet();
+            //MultiSet set2 = new MultiSet();
+            //MultiSet set3 = new MultiSet();
+
+
+            //set1.Add("a");
+            //set1.Add("a");
+            //set1.Add("a");
+            //set1.Add("b"); //{a,a,a,b}
+
+            //set2.Add("a");
+            //set2.Add("a");
+            //set2.Add("b");
+            //set2.Add("c"); //{a,a,b,c}
+
+
+            //MultiSet union = set3.Union(set1); // {a,a,a,b,c}
+
+            //foreach (var i in union.Sets)
+            //{
+            //    Console.WriteLine(i + "");
+            //}
+
+            #endregion
+
+            #region PowerSet Recursive Algorithm
+            //static void makePowerSet(string[] inputs, int[] flag, int index)
+            //{
+
+            //	if (index == inputs.Length)
+            //	{
+            //		for (int i = 0; i < flag.Length; i++)
+            //		{
+            //			if (flag[i] == 1)
+            //			{
+            //				Console.Write(inputs[i]);
+            //			}
+            //		}
+            //		Console.WriteLine();
+            //		return;
+            //	}
+
+            //	flag[index] = 1;
+            //	makePowerSet(inputs, flag, index + 1); 
+
+            //	flag[index] = 0;
+            //	makePowerSet(inputs, flag, index + 1);
+            //}
+            #endregion
         }
-        #region PowerSet Recursive Algorithm
-        //static void makePowerSet(string[] inputs, int[] flag, int index)
-        //{
-
-        //	if (index == inputs.Length)
-        //	{
-        //		for (int i = 0; i < flag.Length; i++)
-        //		{
-        //			if (flag[i] == 1)
-        //			{
-        //				Console.Write(inputs[i]);
-        //			}
-        //		}
-        //		Console.WriteLine();
-        //		return;
-        //	}
-
-        //	flag[index] = 1;
-        //	makePowerSet(inputs, flag, index + 1); 
-
-        //	flag[index] = 0;
-        //	makePowerSet(inputs, flag, index + 1);
-        //}
-        #endregion
-        //}
     }
 }

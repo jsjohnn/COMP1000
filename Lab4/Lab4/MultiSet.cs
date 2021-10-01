@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Lab4
 {
@@ -11,6 +12,7 @@ namespace Lab4
         public MultiSet()
         {
         }
+
         public MultiSet(List<string> elements)
         {
             foreach (var element in elements)
@@ -18,6 +20,7 @@ namespace Lab4
                 Add(element);
             }
         }
+
         public void Add(string element)
         {
             Sets.Add(element);
@@ -160,7 +163,6 @@ namespace Lab4
                         subtract.Add(set);
                     }
                 }
-                // else 조건은 없어도 상관없기 때문에 생략
             }
             subtract.Sets.Sort();
             return subtract;
@@ -175,6 +177,7 @@ namespace Lab4
             int index = 0;
 
             toMakePowerset(powerSets, Sets, flag, index);
+            toSortMultisetList(powerSets);
 
             return powerSets;
         }
@@ -228,6 +231,41 @@ namespace Lab4
 
             flags[index] = 0;
             toMakePowerset(powerSets, inputs, flags, index + 1);
+        }
+
+        private void toSortMultisetList(List<MultiSet> powerSets)
+        {
+            for (int i = 0; i < powerSets.Count - 1; ++i)
+            {
+                for (int j = 0; j < powerSets.Count - 1; ++j)
+                {
+                    MultiSet temp = new MultiSet();
+
+                    StringBuilder sb1 = new StringBuilder();
+                    StringBuilder sb2 = new StringBuilder();
+
+                    foreach (var s in powerSets[j].Sets)
+                    {
+                        sb1.Append(s);
+                    }
+                    foreach (var s in powerSets[j + 1].Sets)
+                    {
+                        sb2.Append(s);
+                    }
+                    string s1 = sb1.ToString();
+                    string s2 = sb2.ToString();
+
+                    if (s2.CompareTo(s1) == -1)
+                    {
+                        temp.Sets = powerSets[j].Sets;
+                        powerSets[j].Sets = powerSets[j + 1].Sets;
+                        powerSets[j + 1].Sets = temp.Sets;
+                    }
+                    sb1.Clear();
+                    sb2.Clear();
+                }
+            }
+
         }
     }
 }
