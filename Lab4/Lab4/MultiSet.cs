@@ -13,7 +13,7 @@ namespace Lab4
         {
         }
 
-        public MultiSet(List<string> elements)
+        private MultiSet(List<string> elements)
         {
             foreach (var element in elements)
             {
@@ -184,12 +184,31 @@ namespace Lab4
 
         public bool IsSubsetOf(MultiSet other)
         {
-            return false;
+            //bool bCheck = true;
+
+            foreach (var set in Sets)
+            {
+                if (!other.Sets.Contains(set))
+                {
+                    return false;
+                }
+                else
+                {
+                    uint temp1 = this.GetMultiplicity(set);
+                    uint temp2 = other.GetMultiplicity(set);
+
+                    if (temp1 > temp2)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
         public bool IsSupersetOf(MultiSet other)
         {
-            return false;
+            return other.IsSubsetOf(this);
         }
 
         private void toMakePowerset(List<MultiSet> powerSets, List<string> inputs, int[] flags, int index)
