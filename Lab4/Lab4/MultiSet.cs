@@ -64,31 +64,32 @@ namespace Lab4
 
             foreach (var set in Sets)
             {
-                union.Add(set);
+                if (union.Sets.Contains(set))
+                {
+                    continue;
+                }
+
+                uint thisSets = GetMultiplicity(set);
+                uint otherSets = other.GetMultiplicity(set);
+
+                uint maxValue = thisSets >= otherSets ? thisSets : otherSets;
+
+                for (uint i = 0; i < maxValue; ++i)
+                {
+                    union.Add(set);
+                }
             }
 
             foreach (var set in other.Sets)
             {
-                if (!union.Sets.Contains(set))
-                {
-                    union.Add(set);
-                }
-                else
+                if (union.Sets.Contains(set))
                 {
                     continue;
                 }
 
-                int temp1 = (int)GetMultiplicity(set); // 0
-                int temp2 = (int)other.GetMultiplicity(set); // 2
+                uint multiplicity = other.GetMultiplicity(set);
 
-                if (temp1 >= temp2)
-                {
-                    continue;
-                }
-
-                int addSetCount = temp2 - temp1;
-
-                for (int i = 0; i < addSetCount - 1; ++i)
+                for (uint i = 0; i < multiplicity; ++i)
                 {
                     union.Add(set);
                 }
@@ -175,7 +176,6 @@ namespace Lab4
 
             toMakePowerset(powerSets, Sets, flag, index);
 
-
             return powerSets;
         }
 
@@ -229,6 +229,5 @@ namespace Lab4
             flags[index] = 0;
             toMakePowerset(powerSets, inputs, flags, index + 1);
         }
-
     }
 }
