@@ -6,7 +6,7 @@ namespace Lab4
 {
     public sealed class MultiSet
     {
-        public List<string> sets = new List<string>(1024);
+        public List<string> Sets = new List<string>(1024);
 
         public MultiSet()
         {
@@ -20,16 +20,16 @@ namespace Lab4
         }
         public void Add(string element)
         {
-            sets.Add(element);
+            Sets.Add(element);
         }
 
         public bool Remove(string element)
         {
-            foreach (var set in sets)
+            foreach (var set in Sets)
             {
                 if (set == element)
                 {
-                    sets.Remove(set);
+                    Sets.Remove(set);
                     return true;
                 }
             }
@@ -41,7 +41,7 @@ namespace Lab4
         {
             uint multiplicityCount = 0;
 
-            foreach (var set in sets)
+            foreach (var set in Sets)
             {
                 if (set == element)
                 {
@@ -54,30 +54,32 @@ namespace Lab4
 
         public List<string> ToList()
         {
-            // sort기능 직접 구현해보기
-            sets.Sort();
-            return sets;
+            Sets.Sort();
+            return Sets;
         }
 
         public MultiSet Union(MultiSet other)
         {
             MultiSet union = new MultiSet();
 
-            foreach (var set in sets)
+            // other = {d,d,h,l}
+            // Sets = {}
+
+            foreach (var set in Sets)
             {
                 union.Add(set);
             }
 
-            foreach (var set in other.sets)
+            foreach (var set in other.Sets)
             {
-                if (!union.sets.Contains(set))
+                if (!union.Sets.Contains(set))
                 {
                     union.Add(set);
                     continue;
                 }
 
-                int temp1 = (int)GetMultiplicity(set);
-                int temp2 = (int)other.GetMultiplicity(set);
+                int temp1 = (int)GetMultiplicity(set); // 0
+                int temp2 = (int)other.GetMultiplicity(set); // 2
 
                 if (temp1 >= temp2)
                 {
@@ -86,12 +88,12 @@ namespace Lab4
 
                 int addSetCount = temp2 - temp1;
 
-                for (int i = 0; i < addSetCount; ++i)
+                for (int i = 0; i < addSetCount - 1; ++i)
                 {
                     union.Add(set);
                 }
             }
-            union.sets.Sort();
+            union.Sets.Sort();
             return union;
         }
 
@@ -99,9 +101,9 @@ namespace Lab4
         {
             MultiSet intersect = new MultiSet();
 
-            foreach (var set in sets)
+            foreach (var set in Sets)
             {
-                if (!other.sets.Contains(set) || intersect.sets.Contains(set))
+                if (!other.Sets.Contains(set) || intersect.Sets.Contains(set))
                 {
                     continue;
                 }
@@ -125,7 +127,7 @@ namespace Lab4
                 }
             }
 
-            intersect.sets.Sort();
+            intersect.Sets.Sort();
             return intersect;
         }
 
@@ -133,19 +135,19 @@ namespace Lab4
         {
             MultiSet subtract = new MultiSet();
 
-            foreach (var set in sets)
+            foreach (var set in Sets)
             {
                 int temp1 = (int)GetMultiplicity(set);
                 int temp2 = (int)other.GetMultiplicity(set);
 
-                if (!other.sets.Contains(set) && !subtract.sets.Contains(set))
+                if (!other.Sets.Contains(set) && !subtract.Sets.Contains(set))
                 {
                     for (int i = 0; i < temp1; ++i)
                     {
                         subtract.Add(set);
                     }
                 }
-                else if (other.sets.Contains(set) && !subtract.sets.Contains(set))
+                else if (other.Sets.Contains(set) && !subtract.Sets.Contains(set))
                 {
                     if (temp2 >= temp1)
                     {
@@ -159,7 +161,7 @@ namespace Lab4
                 }
                 // else 조건은 없어도 상관없기 때문에 생략
             }
-            subtract.sets.Sort();
+            subtract.Sets.Sort();
             return subtract;
         }
 
@@ -168,12 +170,12 @@ namespace Lab4
             List<MultiSet> powerSets = new List<MultiSet>();
             powerSets.Add(new MultiSet());
 
-            int[] flag = new int[sets.Count];
+            int[] flag = new int[Sets.Count];
             int index = 0;
 
-            ToMakePowerset(powerSets, sets, flag, index);
+            toMakePowerset(powerSets, Sets, flag, index);
 
-            
+
             return powerSets;
         }
 
@@ -187,12 +189,12 @@ namespace Lab4
             return false;
         }
 
-        private void ToMakePowerset(List<MultiSet> powerSets, List<string> inputs, int[] flags, int index)
+        private void toMakePowerset(List<MultiSet> powerSets, List<string> inputs, int[] flags, int index)
         {
             if (index == inputs.Count)
             {
                 List<string> temps = new List<string>();
-                
+
                 for (int i = 0; i < flags.Length; i++)
                 {
                     if (flags[i] == 1)
@@ -205,7 +207,7 @@ namespace Lab4
                 bool bDuplicateCheck = false;
                 foreach (var powerset in powerSets)
                 {
-                    if (powerset.sets.SequenceEqual(temps))
+                    if (powerset.Sets.SequenceEqual(temps))
                     {
                         bDuplicateCheck = true;
                         break;
@@ -222,11 +224,11 @@ namespace Lab4
             }
 
             flags[index] = 1;
-            ToMakePowerset(powerSets, inputs, flags, index + 1);
+            toMakePowerset(powerSets, inputs, flags, index + 1);
 
             flags[index] = 0;
-            ToMakePowerset(powerSets, inputs, flags, index + 1);
+            toMakePowerset(powerSets, inputs, flags, index + 1);
         }
-        
+
     }
 }
