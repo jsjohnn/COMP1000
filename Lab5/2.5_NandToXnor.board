@@ -4,8 +4,8 @@
     "Minor": 0
   },
   "PanCoords": {
-    "X": 0.0,
-    "Y": 0.0
+    "X": 181.65234,
+    "Y": 289.3086
   },
   "InputCoords": {
     "X": 90.0,
@@ -15,6 +15,11 @@
     {
       "Order": 0,
       "ID": "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+      "Value": true
+    },
+    {
+      "Order": 1,
+      "ID": "a2a77b91-39d4-4a30-b603-41e123ebafd3",
       "Value": false
     }
   ],
@@ -25,11 +30,63 @@
   "Outputs": [
     {
       "Order": 0,
-      "ID": "fb700d20-5304-4ec7-85f0-13b0e636e502"
+      "ID": "fb700d20-5304-4ec7-85f0-13b0e636e502",
+      "InputSource": "7f84d7b8-59ef-4a1a-8fd4-5f40a2f86294"
     }
   ],
-  "Gates": [],
+  "Gates": [
+    {
+      "ID": "6f2d85f0-9f83-4c9a-b547-5a702b9f4452",
+      "Inputs": [
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112"
+      ],
+      "X": 368.52734,
+      "Y": -12.859375,
+      "Type": "NAND"
+    },
+    {
+      "ID": "75fa82f0-88a3-471e-95ed-2293bb7b675c",
+      "Inputs": [
+        "a2a77b91-39d4-4a30-b603-41e123ebafd3",
+        "a2a77b91-39d4-4a30-b603-41e123ebafd3"
+      ],
+      "X": 369.1172,
+      "Y": 47.914062,
+      "Type": "NAND"
+    },
+    {
+      "ID": "c94cfcbe-8c31-4a33-8c15-a5397835645c",
+      "Inputs": [
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+        "a2a77b91-39d4-4a30-b603-41e123ebafd3"
+      ],
+      "X": 368.63672,
+      "Y": 116.84375,
+      "Type": "NAND"
+    },
+    {
+      "ID": "dc664277-5f23-4b4a-ae02-cdab2a963616",
+      "Inputs": [
+        "6f2d85f0-9f83-4c9a-b547-5a702b9f4452",
+        "75fa82f0-88a3-471e-95ed-2293bb7b675c"
+      ],
+      "X": 523.7539,
+      "Y": 16.484375,
+      "Type": "NAND"
+    },
+    {
+      "ID": "7f84d7b8-59ef-4a1a-8fd4-5f40a2f86294",
+      "Inputs": [
+        "dc664277-5f23-4b4a-ae02-cdab2a963616",
+        "c94cfcbe-8c31-4a33-8c15-a5397835645c"
+      ],
+      "X": 613.1719,
+      "Y": 86.234375,
+      "Type": "NAND"
+    }
+  ],
   "AllowedGateTypes": [
-      "NAND"
+    "NAND"
   ]
 }

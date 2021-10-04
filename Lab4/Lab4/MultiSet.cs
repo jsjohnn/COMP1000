@@ -7,284 +7,181 @@ namespace Lab4
 {
     public sealed class MultiSet
     {
-        public List<string> Sets = new List<string>(1024);
-
-        public MultiSet()
+        public List<string> Set = new List<string>();
+​
+        public MultiSet() { }
+        public MultiSet(List<string> list)
         {
+            Set.AddRange(list);
         }
-
-        private MultiSet(List<string> elements)
-        {
-            foreach (var element in elements)
-            {
-                Add(element);
-            }
-        }
-
+​
         public void Add(string element)
         {
-            Sets.Add(element);
+            Set.Add(element);
         }
-
+​
         public bool Remove(string element)
         {
-            foreach (var set in Sets)
-            {
-                if (set == element)
-                {
-                    Sets.Remove(set);
-                    return true;
-                }
-            }
-
-            return false;
+            bool bContain = Set.Contains(element);
+​
+            Set.Remove(element);
+​
+            return bContain;
         }
-
+​
         public uint GetMultiplicity(string element)
         {
-            uint multiplicityCount = 0;
-
-            foreach (var set in Sets)
-            {
-                if (set == element)
-                {
-                    ++multiplicityCount;
-                }
-            }
-
-            return multiplicityCount;
+            uint number = (uint)Set.Count(s => s == element);
+​
+            return number;
         }
-
+​
         public List<string> ToList()
         {
-            Sets.Sort();
-            return Sets;
+            if (!Set.Any())
+            {
+                return Set;
+            }
+​
+            var result = Set.OrderBy(s => s).ToList();
+​
+            return result;
         }
-
+​
         public MultiSet Union(MultiSet other)
         {
-            MultiSet union = new MultiSet();
-
-            foreach (var set in Sets)
+            var otherList = other.ToList();
+​
+            var result = new List<string>();
+​
+            result.AddRange(Set);
+            result.AddRange(otherList);
+​
+            var intersectList = Intersect(other).ToList();
+​
+            for (int i = 0; i < intersectList.Count; ++i)
             {
-                if (union.Sets.Contains(set))
-                {
-                    continue;
-                }
-
-                uint thisSets = GetMultiplicity(set);
-                uint otherSets = other.GetMultiplicity(set);
-
-                uint maxValue = thisSets >= otherSets ? thisSets : otherSets;
-
-                for (uint i = 0; i < maxValue; ++i)
-                {
-                    union.Add(set);
-                }
+                result.Remove(intersectList[i]);
             }
-
-            foreach (var set in other.Sets)
-            {
-                if (union.Sets.Contains(set))
-                {
-                    continue;
-                }
-
-                uint multiplicity = other.GetMultiplicity(set);
-
-                for (uint i = 0; i < multiplicity; ++i)
-                {
-                    union.Add(set);
-                }
-            }
-            union.Sets.Sort();
-            return union;
+​
+            return new MultiSet(result);
         }
-
+​
         public MultiSet Intersect(MultiSet other)
         {
-            MultiSet intersect = new MultiSet();
-
-            foreach (var set in Sets)
+            var otherList = other.ToList();
+            var defaultSet = Set.OrderBy(s => s).ToList();
+​
+            uint number1;
+            uint number2;
+​
+            var result = new List<string>();
+            for (int i = 0; i < defaultSet.Count(); ++i)
             {
-                if (!other.Sets.Contains(set) || intersect.Sets.Contains(set))
+                if (i != defaultSet.Count() - 1 && defaultSet[i] == defaultSet[i + 1])
                 {
                     continue;
                 }
-
-                int temp1 = (int)GetMultiplicity(set);
-                int temp2 = (int)other.GetMultiplicity(set);
-
-                if (temp1 <= temp2)
+​
+                if (otherList.Contains(defaultSet[i]))
                 {
-                    for (int i = 0; i < temp1; ++i)
+                    number1 = GetMultiplicity(defaultSet[i]);
+                    number2 = other.GetMultiplicity(defaultSet[i]);
+​
+                    uint index = (number1 < number2) ? number1 : number2;
+                    for (int j = 0; j < (int)index; ++j)
                     {
-                        intersect.Add(set);
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < temp2; ++i)
-                    {
-                        intersect.Add(set);
+                        result.Add(defaultSet[i]);
                     }
                 }
             }
-
-            intersect.Sets.Sort();
-            return intersect;
+​
+            return new MultiSet(result);
         }
-
+​
         public MultiSet Subtract(MultiSet other)
         {
-            MultiSet subtract = new MultiSet();
-
-            foreach (var set in Sets)
+            var result = new List<string>();
+​
+            result.AddRange(Set);
+​
+            var intersectList = Intersect(other).ToList();
+​
+            for (int i = 0; i < intersectList.Count(); ++i)
             {
-                int temp1 = (int)GetMultiplicity(set);
-                int temp2 = (int)other.GetMultiplicity(set);
-
-                if (!other.Sets.Contains(set) && !subtract.Sets.Contains(set))
-                {
-                    for (int i = 0; i < temp1; ++i)
-                    {
-                        subtract.Add(set);
-                    }
-                }
-                else if (other.Sets.Contains(set) && !subtract.Sets.Contains(set))
-                {
-                    if (temp2 >= temp1)
-                    {
-                        continue;
-                    }
-
-                    for (int i = 0; i < temp1 - temp2; ++i)
-                    {
-                        subtract.Add(set);
-                    }
-                }
+                result.Remove(intersectList[i]);
             }
-            subtract.Sets.Sort();
-            return subtract;
+​
+            return new MultiSet(result);
         }
-
+​
         public List<MultiSet> FindPowerSet()
         {
-            List<MultiSet> powerSets = new List<MultiSet>();
-            powerSets.Add(new MultiSet());
-
-            int[] flag = new int[Sets.Count];
-            int index = 0;
-
-            toMakePowerset(powerSets, Sets, flag, index);
-            toSortMultisetList(powerSets);
-
-            return powerSets;
+            if (!Set.Any())
+            {
+                return new List<MultiSet> { new MultiSet() };
+            }
+​
+            const char DELIMETER = ',';
+​
+            var powerSet = new List<string>();
+            var filtered = new SortedSet<string>();
+​
+            int totalCount = 1 << Set.Count();
+​
+            for (int bitMask = 0; bitMask < totalCount; ++bitMask)
+            {
+                for (int j = 0; j < Set.Count(); ++j)
+                {
+                    if ((bitMask & (1 << j)) > 0)
+                    {
+                        powerSet.Add(Set[j]);
+                    }
+                }
+                powerSet = powerSet.OrderBy(r => r).ToList();
+                filtered.Add(string.Join(DELIMETER, powerSet));
+                powerSet.Clear();
+            }
+​
+            var sortedList = filtered.ToList();
+​
+            var resultSet = new List<MultiSet>();
+​
+            resultSet.Add(new MultiSet());
+            for (int i = 1; i < sortedList.Count(); ++i)
+            {
+                resultSet.Add(new MultiSet());
+​
+                string[] tokens = sortedList[i].Split(DELIMETER);
+​
+                for (int j = 0; j < tokens.Length; ++j)
+                {
+                    resultSet[i].Add(tokens[j]);
+                }
+            }
+            return resultSet;
         }
-
+​
         public bool IsSubsetOf(MultiSet other)
         {
-            //bool bCheck = true;
-
-            foreach (var set in Sets)
+            if (Set.SequenceEqual(Intersect(other).ToList()))
             {
-                if (!other.Sets.Contains(set))
-                {
-                    return false;
-                }
-                else
-                {
-                    uint temp1 = this.GetMultiplicity(set);
-                    uint temp2 = other.GetMultiplicity(set);
-
-                    if (temp1 > temp2)
-                    {
-                        return false;
-                    }
-                }
+                return true;
             }
-            return true;
+​
+            return false;
         }
-
+​
         public bool IsSupersetOf(MultiSet other)
         {
-            return other.IsSubsetOf(this);
-        }
-
-        private void toMakePowerset(List<MultiSet> powerSets, List<string> inputs, int[] flags, int index)
-        {
-            if (index == inputs.Count)
+            var otherList = other.ToList();
+​
+            if (otherList.SequenceEqual(Intersect(other).ToList()))
             {
-                List<string> temps = new List<string>();
-
-                for (int i = 0; i < flags.Length; i++)
-                {
-                    if (flags[i] == 1)
-                    {
-                        temps.Add(inputs[i]);
-                    }
-                }
-                temps.Sort();
-
-                bool bDuplicateCheck = false;
-                foreach (var powerset in powerSets)
-                {
-                    if (powerset.Sets.SequenceEqual(temps))
-                    {
-                        bDuplicateCheck = true;
-                        break;
-                    }
-                }
-                if (!bDuplicateCheck)
-                {
-                    powerSets.Add(new MultiSet(temps));
-                }
-
-                temps.Clear();
-
-                return;
+                return true;
             }
-
-            flags[index] = 1;
-            toMakePowerset(powerSets, inputs, flags, index + 1);
-
-            flags[index] = 0;
-            toMakePowerset(powerSets, inputs, flags, index + 1);
-        }
-
-        private void toSortMultisetList(List<MultiSet> powerSets)
-        {
-            for (int i = 0; i < powerSets.Count - 1; ++i)
-            {
-                for (int j = 0; j < powerSets.Count - 1; ++j)
-                {
-                    MultiSet temp = new MultiSet();
-
-                    StringBuilder sb1 = new StringBuilder();
-                    StringBuilder sb2 = new StringBuilder();
-
-                    foreach (var s in powerSets[j].Sets)
-                    {
-                        sb1.Append(s);
-                    }
-                    foreach (var s in powerSets[j + 1].Sets)
-                    {
-                        sb2.Append(s);
-                    }
-                    string s1 = sb1.ToString();
-                    string s2 = sb2.ToString();
-
-                    if (s2.CompareTo(s1) == -1)
-                    {
-                        temp.Sets = powerSets[j].Sets;
-                        powerSets[j].Sets = powerSets[j + 1].Sets;
-                        powerSets[j + 1].Sets = temp.Sets;
-                    }
-                    sb1.Clear();
-                    sb2.Clear();
-                }
-            }
-
+​
+            return false;
         }
     }
 }

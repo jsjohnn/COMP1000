@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.Lab4 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Lab4/MultiSet.cs">
     <Files>
-      <File FileName="Lab4/Program.cs" Line="49" Column="29" />
-      <File FileName="Lab4/MultiSet.cs" Line="242" Column="52" />
+      <File FileName="Lab4/MultiSet.cs" Line="15" Column="32" />
+      <File FileName="Lab4/MyMultiSet.cs" Line="52" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

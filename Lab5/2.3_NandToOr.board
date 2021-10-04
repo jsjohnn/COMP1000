@@ -4,8 +4,8 @@
     "Minor": 0
   },
   "PanCoords": {
-    "X": 0.0,
-    "Y": 0.0
+    "X": 207.6289,
+    "Y": 250.74219
   },
   "InputCoords": {
     "X": 90.0,
@@ -16,6 +16,11 @@
       "Order": 0,
       "ID": "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
       "Value": false
+    },
+    {
+      "Order": 1,
+      "ID": "33b0604e-e879-41ce-8f92-d4e108c35679",
+      "Value": true
     }
   ],
   "OutputCoords": {
@@ -25,11 +30,43 @@
   "Outputs": [
     {
       "Order": 0,
-      "ID": "fb700d20-5304-4ec7-85f0-13b0e636e502"
+      "ID": "fb700d20-5304-4ec7-85f0-13b0e636e502",
+      "InputSource": "1c8d2861-f54e-4b75-a896-8114ff124c00"
     }
   ],
-  "Gates": [],
+  "Gates": [
+    {
+      "ID": "7d172b76-8a0b-4a9d-9a87-b2547e001ea5",
+      "Inputs": [
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112"
+      ],
+      "X": 371.44922,
+      "Y": 12.515625,
+      "Type": "NAND"
+    },
+    {
+      "ID": "9eb1890f-1ea3-49f3-ac1c-608b452b731b",
+      "Inputs": [
+        "33b0604e-e879-41ce-8f92-d4e108c35679",
+        "33b0604e-e879-41ce-8f92-d4e108c35679"
+      ],
+      "X": 373.97656,
+      "Y": 87.16016,
+      "Type": "NAND"
+    },
+    {
+      "ID": "1c8d2861-f54e-4b75-a896-8114ff124c00",
+      "Inputs": [
+        "7d172b76-8a0b-4a9d-9a87-b2547e001ea5",
+        "9eb1890f-1ea3-49f3-ac1c-608b452b731b"
+      ],
+      "X": 527.4453,
+      "Y": 47.871094,
+      "Type": "NAND"
+    }
+  ],
   "AllowedGateTypes": [
-      "NAND"
+    "NAND"
   ]
 }
