@@ -4,17 +4,22 @@
     "Minor": 0
   },
   "PanCoords": {
-    "X": 0.0,
-    "Y": 0.0
+    "X": 201.53906,
+    "Y": 353.76562
   },
   "InputCoords": {
-    "X": 90.0,
-    "Y": 26.0
+    "X": 84.58984,
+    "Y": -35.57422
   },
   "Inputs": [
     {
       "Order": 0,
       "ID": "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+      "Value": false
+    },
+    {
+      "Order": 1,
+      "ID": "0f9b9c5c-3b8f-4740-a6e9-503eed6bd5b9",
       "Value": false
     }
   ],
@@ -25,11 +30,63 @@
   "Outputs": [
     {
       "Order": 0,
-      "ID": "fb700d20-5304-4ec7-85f0-13b0e636e502"
+      "ID": "fb700d20-5304-4ec7-85f0-13b0e636e502",
+      "InputSource": "3f1ded90-302e-44c9-b9d9-dc912c50711e"
     }
   ],
-  "Gates": [],
+  "Gates": [
+    {
+      "ID": "69b2b34b-f933-4e48-bb15-3ac190d13f2f",
+      "Inputs": [
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112"
+      ],
+      "X": 363.27344,
+      "Y": 27.628906,
+      "Type": "NOR"
+    },
+    {
+      "ID": "40705c56-f421-4d8d-96fa-f9b6140e4a94",
+      "Inputs": [
+        "69b2b34b-f933-4e48-bb15-3ac190d13f2f",
+        "776a3ed7-54df-4df5-9d98-d61cccc46615"
+      ],
+      "X": 519.52344,
+      "Y": 57.40625,
+      "Type": "NOR"
+    },
+    {
+      "ID": "a3425725-d470-429a-9965-45d27833cad5",
+      "Inputs": [
+        "79e0ba00-8ac1-4ac1-bd72-ec09e9888112",
+        "0f9b9c5c-3b8f-4740-a6e9-503eed6bd5b9"
+      ],
+      "X": 367.1836,
+      "Y": -67.58984,
+      "Type": "NOR"
+    },
+    {
+      "ID": "776a3ed7-54df-4df5-9d98-d61cccc46615",
+      "Inputs": [
+        "0f9b9c5c-3b8f-4740-a6e9-503eed6bd5b9",
+        "0f9b9c5c-3b8f-4740-a6e9-503eed6bd5b9"
+      ],
+      "X": 362.9453,
+      "Y": 99.32422,
+      "Type": "NOR"
+    },
+    {
+      "ID": "3f1ded90-302e-44c9-b9d9-dc912c50711e",
+      "Inputs": [
+        "a3425725-d470-429a-9965-45d27833cad5",
+        "40705c56-f421-4d8d-96fa-f9b6140e4a94"
+      ],
+      "X": 648.1328,
+      "Y": -23.042969,
+      "Type": "NOR"
+    }
+  ],
   "AllowedGateTypes": [
-      "NOR"
+    "NOR"
   ]
 }
