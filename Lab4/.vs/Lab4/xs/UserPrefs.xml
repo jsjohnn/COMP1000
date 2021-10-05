@@ -1,26 +1,10 @@
 ﻿<Properties StartupConfiguration="{488532D5-8F5C-44F3-9ED7-6F8E2083C8F6}|Default">
   <MonoDevelop.Ide.ItemProperties.Lab4 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lab4/MultiSet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab4/MyMultiSet.cs">
     <Files>
       <File FileName="Lab4/MultiSet.cs" Line="15" Column="32" />
       <File FileName="Lab4/MyMultiSet.cs" Line="52" Column="27" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Lab4" expanded="True">
-            <Node name="Lab4" expanded="True">
-              <Node name="MultiSet.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>union.Sets</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
