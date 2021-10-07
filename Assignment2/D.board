@@ -4,8 +4,8 @@
     "Minor": 0
   },
   "PanCoords": {
-    "X": 221.0625,
-    "Y": 480.2422
+    "X": 210.1289,
+    "Y": 562.4219
   },
   "InputCoords": {
     "X": 25.589844,
@@ -15,22 +15,22 @@
     {
       "Order": 0,
       "ID": "78a85090-18ce-4dc3-a066-a4855636db23",
-      "Value": false
+      "Value": true
     },
     {
       "Order": 1,
       "ID": "04cfd2a0-1cfa-4bc3-ba27-bdad966ab9ce",
-      "Value": false
+      "Value": true
     },
     {
       "Order": 2,
       "ID": "37c77a30-5a59-4fcd-9583-66fd9585a703",
-      "Value": false
+      "Value": true
     },
     {
       "Order": 3,
       "ID": "420c9f40-0544-45ca-af09-5d9a35284443",
-      "Value": false
+      "Value": true
     }
   ],
   "OutputCoords": {
@@ -41,7 +41,7 @@
     {
       "Order": 0,
       "ID": "c419a800-4f74-42cc-b9bb-77acf24991a0",
-      "InputSource": "1ce588d5-f804-48dd-83f6-724466a78e6f"
+      "InputSource": "b2ea400b-a85e-4dde-8cb1-0e347f1038bf"
     },
     {
       "Order": 1,
@@ -116,23 +116,13 @@
       "Type": "AND"
     },
     {
-      "ID": "1f6b3628-c084-47d8-bbaa-62cb44f6e2f5",
+      "ID": "b2ea400b-a85e-4dde-8cb1-0e347f1038bf",
       "Inputs": [
         "78a85090-18ce-4dc3-a066-a4855636db23",
         "37c77a30-5a59-4fcd-9583-66fd9585a703"
       ],
-      "X": 387.70312,
-      "Y": -311.39453,
-      "Type": "OR"
-    },
-    {
-      "ID": "1ce588d5-f804-48dd-83f6-724466a78e6f",
-      "Inputs": [
-        "1f6b3628-c084-47d8-bbaa-62cb44f6e2f5",
-        "05d380c3-3982-4ebf-b5ba-73337aaa1561"
-      ],
-      "X": 585.0117,
-      "Y": -284.53125,
+      "X": 531.7539,
+      "Y": -298.85938,
       "Type": "XOR"
     }
   ],
