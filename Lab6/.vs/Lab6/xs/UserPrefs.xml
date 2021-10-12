@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{1D517D7F-80FB-4BC4-B507-8CE7C65135A6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab6/Recyclebot.cs">
+    <Files>
+      <File FileName="Lab6/Program.cs" Line="28" Column="36" />
+      <File FileName="Lab6/Recyclebot.cs" Line="33" Column="1" />
+      <File FileName="Lab6/Item.cs" />
+      <File FileName="Lab6/EType.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Lab6" expanded="True">
+            <Node name="Lab6" expanded="True">
+              <Node name="Recyclebot.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Lab6 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

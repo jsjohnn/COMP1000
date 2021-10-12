@@ -1,0 +1,15 @@
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/bin/Debug/net5.0/Lab6.deps.json
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/bin/Debug/net5.0/Lab6.runtimeconfig.json
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/bin/Debug/net5.0/Lab6.runtimeconfig.dev.json
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/bin/Debug/net5.0/Lab6.dll
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/bin/Debug/net5.0/ref/Lab6.dll
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/bin/Debug/net5.0/Lab6.pdb
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.csprojAssemblyReference.cache
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.GeneratedMSBuildEditorConfig.editorconfig
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.AssemblyInfoInputs.cache
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.AssemblyInfo.cs
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.csproj.CoreCompileInputs.cache
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.dll
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/ref/Lab6.dll
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.pdb
+/Users/donghwa/Desktop/COMP1000/Lab6/Lab6/obj/Debug/net5.0/Lab6.genruntimeconfig.cache
