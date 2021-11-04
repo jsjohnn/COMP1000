@@ -1,0 +1,15 @@
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/bin/Debug/net5.0/Lab7.deps.json
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/bin/Debug/net5.0/Lab7.runtimeconfig.json
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/bin/Debug/net5.0/Lab7.runtimeconfig.dev.json
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/bin/Debug/net5.0/Lab7.dll
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/bin/Debug/net5.0/ref/Lab7.dll
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/bin/Debug/net5.0/Lab7.pdb
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.csprojAssemblyReference.cache
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.GeneratedMSBuildEditorConfig.editorconfig
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.AssemblyInfoInputs.cache
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.AssemblyInfo.cs
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.csproj.CoreCompileInputs.cache
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.dll
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/ref/Lab7.dll
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.pdb
+/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/obj/Debug/net5.0/Lab7.genruntimeconfig.cache

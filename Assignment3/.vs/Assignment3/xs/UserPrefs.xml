@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{087C143E-758D-4970-95FE-1586D3FABBFE}|Default">
+  <MonoDevelop.Ide.ItemProperties.Assignment3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3/StepMaker.cs">
+    <Files>
+      <File FileName="Assignment3/Program.cs" Line="52" Column="10" />
+      <File FileName="Assignment3/StepMaker.cs" Line="22" Column="13" />
+      <File FileName="Assignment3/INoise.cs" Line="11" Column="1" />
+      <File FileName="Assignment3/ZeroNoise.cs" Line="4" Column="43" />
+      <File FileName="Assignment3/ConstantNoise.cs" Line="6" Column="38" />
+      <File FileName="Assignment3/SineNoise.cs" Line="13" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment3" expanded="True">
+            <Node name="Assignment3" expanded="True">
+              <Node name="StepMaker.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>newSteps</Value>
+          <Value>expectedValue3</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

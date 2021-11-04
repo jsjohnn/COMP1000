@@ -1,0 +1,15 @@
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/bin/Debug/net5.0/Assignment3.deps.json
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/bin/Debug/net5.0/Assignment3.runtimeconfig.json
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/bin/Debug/net5.0/Assignment3.runtimeconfig.dev.json
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/bin/Debug/net5.0/Assignment3.dll
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/bin/Debug/net5.0/ref/Assignment3.dll
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/bin/Debug/net5.0/Assignment3.pdb
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.csprojAssemblyReference.cache
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.AssemblyInfoInputs.cache
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.AssemblyInfo.cs
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.csproj.CoreCompileInputs.cache
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.dll
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/ref/Assignment3.dll
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.pdb
+/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/obj/Debug/net5.0/Assignment3.genruntimeconfig.cache
