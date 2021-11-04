@@ -1,5 +1,4 @@
-﻿using System;
-namespace Lab7
+﻿namespace Lab7
 {
     public class Frame
     {
