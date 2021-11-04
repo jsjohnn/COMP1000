@@ -5,37 +5,37 @@ namespace Lab7
 {
     public static class FilterEngine
     {
-        private static List<Frame> filterFrames = new List<Frame>();
-        private static List<Frame> filterOutFrames = new List<Frame>();
+        private static List<Frame> mFilterFrames = new List<Frame>();
+        private static List<Frame> mFilterOutFrames = new List<Frame>();
 
         public static List<Frame> FilterFrames(List<Frame> frames, EFeatureFlags features)
         {
-            filterFrames = new List<Frame>(frames.Count);
-            filterOutFrames = new List<Frame>(frames.Count);
-            EFeatureFlags EFlagForCheck = new EFeatureFlags();
+            mFilterFrames = new List<Frame>(frames.Count);
+            mFilterOutFrames = new List<Frame>(frames.Count);
+            EFeatureFlags flagForCheck = new EFeatureFlags();
 
             foreach (var i in frames)
             {
-                EFlagForCheck = new EFeatureFlags(); // <- 생략가능한지 확인
+                flagForCheck = new EFeatureFlags(); // <- 생략가능한지 확인
                 Frame temps = i;
-                EFlagForCheck = temps.Features & features;
-                if (EFlagForCheck != EFeatureFlags.Default)
+                flagForCheck = temps.Features & features;
+                if (flagForCheck != EFeatureFlags.Default)
                 {
-                    filterFrames.Add(i);
+                    mFilterFrames.Add(i);
                 }
                 else
                 {
-                    filterOutFrames.Add(i);
+                    mFilterOutFrames.Add(i);
                 }
             }
 
-            return filterFrames;
+            return mFilterFrames;
         }
 
         public static List<Frame> FilterOutFrames(List<Frame> frames, EFeatureFlags features)
         {
             FilterFrames(frames, features);
-            return filterOutFrames;
+            return mFilterOutFrames;
         }
 
         public static List<Frame> Intersect(List<Frame> frames1, List<Frame> frames2)
