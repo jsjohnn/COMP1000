@@ -2,24 +2,15 @@
   <MonoDevelop.Ide.ItemProperties.Lab7 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Lab7/FilterEngine.cs">
     <Files>
-      <File FileName="Lab7/Program.cs" Line="38" Column="1" />
+      <File FileName="Lab7/Program.cs" Line="150" Column="6" />
       <File FileName="Lab7/Frame.cs" />
-      <File FileName="Lab7/FilterEngine.cs" Line="99" Column="34" />
+      <File FileName="Lab7/FilterEngine.cs" Line="65" Column="14" />
       <File FileName="Lab7/EFeatureFlags.cs" />
     </Files>
     <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Lab7" expanded="True">
-            <Node name="Lab7" expanded="True">
-              <Node name="FilterEngine.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>applyFeaturesScore</Value>
+          <Value>sortedFrames</Value>
         </State>
       </Pad>
     </Pads>
@@ -27,9 +18,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/donghwa/Desktop/COMP1000/Lab7/Lab7/FilterEngine.cs" relfile="Lab7/FilterEngine.cs" line="86" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

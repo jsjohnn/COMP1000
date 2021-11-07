@@ -8,5 +8,4 @@ namespace Assignment3
     {
         int GetNext(int level);
     }
-    
 }

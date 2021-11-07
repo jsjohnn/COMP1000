@@ -35,7 +35,7 @@ namespace Lab7
 
         public static List<Frame> Intersect(List<Frame> frames1, List<Frame> frames2)
         {
-            List<Frame> intersectList = new List<Frame>();
+            var intersectList = new List<Frame>();
 
             foreach (var i in frames1)
             {
@@ -53,30 +53,30 @@ namespace Lab7
 
         public static List<int> GetSortKeys(List<Frame> frames, List<EFeatureFlags> features)
         {
-            Dictionary<EFeatureFlags, int> framesWithScore = new Dictionary<EFeatureFlags, int>(features.Count);
-            List<int> listForScore = new List<int>(frames.Count);
+            var featuresWithScore = new Dictionary<EFeatureFlags, int>(features.Count);
+            var scoreOfFrames = new List<int>(frames.Count);
 
             int count = 1;
             for (int i = features.Count - 1; i >= 0; --i)
             {
-                framesWithScore.TryAdd(features[i], count);
-                count *= 2;
+                featuresWithScore.TryAdd(features[i], count);
+                count <<= 2;
             }
 
             foreach (var i in frames)
             {
                 int inclementValue = 0;
-                foreach (var j in framesWithScore)
+                foreach (var j in featuresWithScore)
                 {
                     if ((i.Features & j.Key) != default)
                     {
                         inclementValue += j.Value;
                     }
                 }
-                listForScore.Add(inclementValue);
+                scoreOfFrames.Add(inclementValue);
             }
 
-            return listForScore;
+            return scoreOfFrames;
         }
     }
 }

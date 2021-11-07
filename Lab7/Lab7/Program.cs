@@ -9,6 +9,7 @@ namespace Lab7
     {
         static void Main(string[] args)
         {
+
             Frame frame1 = new Frame(1, "Ray-Ban");
 
             frame1.ToggleFeatures(EFeatureFlags.Aviator | EFeatureFlags.Red);
