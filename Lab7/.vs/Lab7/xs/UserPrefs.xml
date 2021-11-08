@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.Lab7 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Lab7/FilterEngine.cs">
     <Files>
-      <File FileName="Lab7/Program.cs" Line="150" Column="6" />
+      <File FileName="Lab7/Program.cs" Line="4" Column="19" />
       <File FileName="Lab7/Frame.cs" />
-      <File FileName="Lab7/FilterEngine.cs" Line="65" Column="14" />
-      <File FileName="Lab7/EFeatureFlags.cs" />
+      <File FileName="Lab7/FilterEngine.cs" Line="26" Column="1" />
+      <File FileName="Lab7/EFeatureFlags.cs" Line="15" Column="20" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

@@ -1,0 +1,15 @@
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/bin/Debug/net5.0/Lab8.deps.json
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/bin/Debug/net5.0/Lab8.runtimeconfig.json
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/bin/Debug/net5.0/Lab8.runtimeconfig.dev.json
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/bin/Debug/net5.0/Lab8.dll
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/bin/Debug/net5.0/ref/Lab8.dll
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/bin/Debug/net5.0/Lab8.pdb
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.csprojAssemblyReference.cache
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.GeneratedMSBuildEditorConfig.editorconfig
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.AssemblyInfoInputs.cache
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.AssemblyInfo.cs
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.csproj.CoreCompileInputs.cache
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.dll
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/ref/Lab8.dll
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.pdb
+/Users/donghwa/Desktop/COMP1000/Lab8/Lab8/obj/Debug/net5.0/Lab8.genruntimeconfig.cache

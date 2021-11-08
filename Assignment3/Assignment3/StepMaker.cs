@@ -7,21 +7,88 @@ namespace Assignment3
     {
         public static List<int> MakeSteps(int[] steps, INoise noise)
         {
-            List<int> newSteps = new List<int>(steps.Length);
-            newSteps.AddRange(steps);
+            List<int> newSteps = new List<int>(1024);
+            //newSteps.AddRange(steps);
 
-            //AddStepsRecursive(newSteps, noise, 0, 0);
+            for (int i = 0; i < steps.Length - 1; ++i)
+            {
+                var tempList = new List<int>(1024);
+                if (Math.Abs(steps[i] - steps[i + 1]) > 10)
+                {
+                    tempList.Add(steps[i]);
+                    tempList.Add(steps[i + 1]);
+                    tempList = AddStepsRecursive(tempList, 0, 0, noise);
+                    
+                }
+                else if (tempList.Count == 0 || (tempList[tempList.Count -1] != steps[i]))
+                {
+                    newSteps.Add(steps[i]);
+                }
+                newSteps.AddRange(tempList);
+            }
+
+            if (Math.Abs(steps[steps.Length -2] - steps[steps.Length -1]) < 11)
+            {
+                newSteps.Add(steps[steps.Length - 1]);
+            }
+            //newSteps.Add(steps[steps.Length - 1]);
+
             return newSteps;
         }
 
-        
-        
+        private static List<int> AddStepsRecursive(List<int> newSteps, int index, int depth, INoise noise)
+        {
+            if (index >= newSteps.Count - 1)
+            {
+                return newSteps;
+            }
+
+            
+            if (Math.Abs(newSteps[index] - newSteps[index + 1]) < 11)
+            {
+                AddStepsRecursive(newSteps, ++index, depth, noise);
+                return newSteps;
+            }
+
+            int diff = Math.Abs(newSteps[index + 1] - newSteps[index]);
+
+            float[] increments = new float[4] { diff * 0.2f, diff * 0.4f, diff * 0.6f, diff * 0.8f };
+
+            if (newSteps[index] > newSteps[index + 1])
+            {
+                newSteps.Insert(index + 1, (int)(newSteps[index + 1] + increments[3]) + noise.GetNext(depth));
+                newSteps.Insert(index + 2, (int)(newSteps[index + 2] + increments[2]) + noise.GetNext(depth));
+                newSteps.Insert(index + 3, (int)(newSteps[index + 3] + increments[1]) + noise.GetNext(depth));
+                newSteps.Insert(index + 4, (int)(newSteps[index + 4] + increments[0]) + noise.GetNext(depth));
+
+            }
+            else
+            {
+                newSteps.Insert(index + 1, (int)(newSteps[index] + increments[0]) + noise.GetNext(depth));
+                newSteps.Insert(index + 2, (int)(newSteps[index] + increments[1]) + noise.GetNext(depth));
+                newSteps.Insert(index + 3, (int)(newSteps[index] + increments[2]) + noise.GetNext(depth));
+                newSteps.Insert(index + 4, (int)(newSteps[index] + increments[3]) + noise.GetNext(depth));
+            }
+
+            if (Math.Abs(newSteps[index] - newSteps[index + 1]) > 10)
+            {
+                AddStepsRecursive(newSteps, index, ++depth, noise);
+            }
+            else
+            {
+                AddStepsRecursive(newSteps, ++index, depth, noise);
+            }
+
+            //AddStepsRecursive(newSteps, index + 5, depth, noise);
+
+            return newSteps;
+        }
 
 
         #region cosineFail
         //private static List<int> AddStepsRecursive(List<int> steps, INoise noise, int index, int depth)
         //{
-        //    if (index >= steps.Count -1)
+        //    if (index >= steps.Count - 1)
         //    {
         //        return null;
         //    }
@@ -33,11 +100,11 @@ namespace Assignment3
         //    }
 
         //    int diff = Math.Abs(steps[index + 1] - steps[index]);
-            
+
         //    //int[] increments = new int[4] {(int)(diff *  0.2), (int)(diff * 0.4), (int)(diff * 0.6), (int)(diff * 0.8)};
         //    float[] increments = new float[4] { diff * 0.2f, diff * 0.4f, diff * 0.6f, diff * 0.8f };
 
-        //    if (steps[index] > steps[index+1])
+        //    if (steps[index] > steps[index + 1])
         //    {
         //        steps.Insert(index + 1, (int)(steps[index + 1] + increments[3]) + noise.GetNext(depth));
         //        steps.Insert(index + 2, (int)(steps[index + 2] + increments[2]) + noise.GetNext(depth));
@@ -53,18 +120,12 @@ namespace Assignment3
         //        steps.Insert(index + 4, (int)(steps[index] + increments[3]) + noise.GetNext(depth));
         //    }
 
-        //    AddStepsRecursive(steps, noise, index + 5, depth);
         //    AddStepsRecursive(steps, noise, 0, ++depth);
+        //    AddStepsRecursive(steps, noise, index + 5, depth);
 
         //    return steps;
-        }
+        //}
         #endregion
-
-        // 100, {157, 207, 256, 305}, 360 -> d:0
-        // 100, {107, 117, 130, 142}, 157, 207, 256, 305, 360 -> d:1
-        // 100, 107, 117, 130, 142, 157, {166, 177, 188, 200} 207, 256, 305, 360 -> d:1
-
-
         #region second
         //private static List<int> AddSteps(List<int> nums, int index, INoise noise, int depth)
         //{
