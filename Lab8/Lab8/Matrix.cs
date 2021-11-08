@@ -1,5 +1,4 @@
-﻿using System;
-namespace Lab8
+﻿namespace Lab8
 {
     public static class Matrix
     {
@@ -99,7 +98,7 @@ namespace Lab8
                 {
                     temp += matrix[i, j] * vector[j];
                 }
-                if(temp != 0)
+                if (temp != 0)
                 {
                     product[i] = temp;
                 }
