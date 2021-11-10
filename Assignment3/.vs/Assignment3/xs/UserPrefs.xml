@@ -1,25 +1,31 @@
 ﻿<Properties StartupConfiguration="{087C143E-758D-4970-95FE-1586D3FABBFE}|Default">
   <MonoDevelop.Ide.ItemProperties.Assignment3 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3/StepMaker.cs">
     <Files>
-      <File FileName="Assignment3/Program.cs" Line="26" Column="51" />
-      <File FileName="Assignment3/StepMaker.cs" Line="25" Column="44" />
-      <File FileName="Assignment3/INoise.cs" Line="11" Column="2" />
-      <File FileName="Assignment3/ZeroNoise.cs" Line="9" Column="1" />
+      <File FileName="Assignment3/Program.cs" Line="16" Column="1" />
+      <File FileName="Assignment3/StepMaker.cs" Line="61" Column="1" />
+      <File FileName="Assignment3/INoise.cs" />
+      <File FileName="Assignment3/ZeroNoise.cs" />
       <File FileName="Assignment3/ConstantNoise.cs" />
-      <File FileName="Assignment3/SineNoise.cs" Line="14" Column="1" />
+      <File FileName="Assignment3/SineNoise.cs" />
       <File FileName="Assignment3/LevelNoise.cs" />
-      <File FileName="Assignment3/CosineNoise.cs" Line="13" Column="1" />
+      <File FileName="Assignment3/CosineNoise.cs" />
     </Files>
     <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assignment3" expanded="True">
+            <Node name="Assignment3" expanded="True">
+              <Node name="StepMaker.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
           <Value>newSteps</Value>
-          <Value>index</Value>
           <Value>depth</Value>
-          <Value>newSteps[index] - newSteps[index + 1]</Value>
-          <Value>Math.Abs(newSteps[index] - newSteps[index + 1])</Value>
-          <Value>steps</Value>
+          <Value>index</Value>
         </State>
       </Pad>
     </Pads>
@@ -27,7 +33,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/Program.cs" relfile="Assignment3/Program.cs" line="29" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

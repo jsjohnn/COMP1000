@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{5F94D9FE-71BB-41AB-9178-8B3C58881BD0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lab8/Matrix.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab8/Program.cs">
     <Files>
-      <File FileName="Lab8/Program.cs" Line="10" Column="10" />
-      <File FileName="Lab8/Matrix.cs" Line="7" Column="10" />
+      <File FileName="Lab8/Program.cs" Line="138" Column="1" />
+      <File FileName="Lab8/Matrix.cs" Line="21" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Lab8" expanded="True">
             <Node name="Lab8" expanded="True">
-              <Node name="Matrix.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>sortedFrames</Value>
+          <Value>matVecProduct</Value>
+          <Value>transposed</Value>
         </State>
       </Pad>
     </Pads>

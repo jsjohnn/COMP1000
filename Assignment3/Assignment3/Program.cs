@@ -34,6 +34,7 @@ namespace Assignment3
             }
             List<int> temp = new List<int> { 185, 182, 180, 177, 175, 173, 170, 168, 165, 163, 161, 158, 156, 153, 151, 149, 146, 144, 141, 139, 137, 134, 132, 129, 127, 125, 127, 123, 119, 115, 111, 107, 116 };
             int[] temp1 = new int[] { 185, 125, 127, 107, 116 };
+            //int[] temp1 = new int[] { 185, 125 };
             newSteps = StepMaker.MakeSteps(temp1, new ZeroNoise());
             Debug.Assert(temp.Count == newSteps.Count);
             for (int i = 0; i < temp.Count; i++)
@@ -57,6 +58,8 @@ namespace Assignment3
             {
                 Debug.Assert(temp[i] == newSteps[i]);
             }
+
+            
             temp = new List<int> { 100, 102, 112, 111, 113, 117, 121, 128, 138, 146, 155, 157, 161, 165, 170, 170 };
             temp1 = new int[] { 100, 102, 112, 170 };
             newSteps = StepMaker.MakeSteps(temp1, new CosineNoise());
@@ -75,6 +78,8 @@ namespace Assignment3
             {
                 Debug.Assert(temp[i] == newSteps[i]);
             }
+
+            
         }
     }
 }
