@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.ItemProperties.Assignment3 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3/StepMaker.cs">
     <Files>
-      <File FileName="Assignment3/Program.cs" Line="16" Column="1" />
-      <File FileName="Assignment3/StepMaker.cs" Line="61" Column="1" />
+      <File FileName="Assignment3/Program.cs" Line="50" Column="1" />
+      <File FileName="Assignment3/StepMaker.cs" Line="25" Column="14" />
       <File FileName="Assignment3/INoise.cs" />
       <File FileName="Assignment3/ZeroNoise.cs" />
       <File FileName="Assignment3/ConstantNoise.cs" />
@@ -21,21 +21,12 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>newSteps</Value>
-          <Value>depth</Value>
-          <Value>index</Value>
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/donghwa/Desktop/COMP1000/Assignment3/Assignment3/Program.cs" relfile="Assignment3/Program.cs" line="29" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

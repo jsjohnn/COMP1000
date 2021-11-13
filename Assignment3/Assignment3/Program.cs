@@ -7,6 +7,7 @@ namespace Assignment3
     {
         static void Main(string[] args)
         {
+
             List<int> expectedValue1 = new List<int> { 100, 102, 112, 114, 116, 118, 120, 123, 125, 127, 130, 132, 135, 137, 139, 141, 143, 146, 148, 150, 153, 155, 158, 160, 162, 165, 167, 170 };
             List<int> expectedValue2 = new List<int> { 100, 102, 112, 115, 117, 120, 122, 124, 127, 129, 132, 134, 136, 139, 141, 143, 145, 147, 150, 152, 155, 157, 159, 162, 164, 166, 168, 170 };
             List<int> expectedValue3 = new List<int> { 100, 102, 112, 115, 116, 117, 117, 123, 122, 124, 128, 132, 138, 139, 143, 146, 151, 151, 161, 170 };
@@ -34,7 +35,6 @@ namespace Assignment3
             }
             List<int> temp = new List<int> { 185, 182, 180, 177, 175, 173, 170, 168, 165, 163, 161, 158, 156, 153, 151, 149, 146, 144, 141, 139, 137, 134, 132, 129, 127, 125, 127, 123, 119, 115, 111, 107, 116 };
             int[] temp1 = new int[] { 185, 125, 127, 107, 116 };
-            //int[] temp1 = new int[] { 185, 125 };
             newSteps = StepMaker.MakeSteps(temp1, new ZeroNoise());
             Debug.Assert(temp.Count == newSteps.Count);
             for (int i = 0; i < temp.Count; i++)
@@ -50,6 +50,7 @@ namespace Assignment3
             {
                 Debug.Assert(expectedValue[i] == newSteps[i]);
             }
+
             temp = new List<int> { -11, -5, 0, 4, 9, 15, 19, 23, 28, 32, 37, 34, 31, 28, 25, 22, 19, 16, 13, 10, 7, 4, 1, 0, -3, -6, -9, -12, -15, -18, -21, -24, -27, -30, -33, -36, -27, -18, -9, 0, 8, 17, 26, 35, 44, 53, 62, 71, 80, 89, 98, 107, 116, 125, 134, 143, 152, 161, 170, 179, 188 };
             temp1 = new int[] { -11, 15, 37, -36, 188 };
             newSteps = StepMaker.MakeSteps(temp1, new ZeroNoise());
@@ -59,7 +60,6 @@ namespace Assignment3
                 Debug.Assert(temp[i] == newSteps[i]);
             }
 
-            
             temp = new List<int> { 100, 102, 112, 111, 113, 117, 121, 128, 138, 146, 155, 157, 161, 165, 170, 170 };
             temp1 = new int[] { 100, 102, 112, 170 };
             newSteps = StepMaker.MakeSteps(temp1, new CosineNoise());
@@ -69,17 +69,15 @@ namespace Assignment3
                 Debug.Assert(temp[i] == newSteps[i]);
             }
 
-            temp = new List<int> { 100, 107, 117, 117, 121, 124, 127, 130, 132, 135, 139, 142, 142, 149, 152, 155, 159, 157, 159, 161, 163, 165, 171, 180, 188, 197, 207, 212, 221, 221, 224, 227, 229, 232, 234, 237, 240, 243, 243, 249, 252, 254, 258, 256, 258, 260, 261, 263, 269, 278, 286, 295, 305, 312, 322, 322, 325, 329, 331, 334, 336, 339, 343, 346, 346, 352, 355, 358, 362, 360 };
+            var vtemp = new List<int> { 100, 107, 117, 117, 121, 124, 127, 130, 132, 135, 139, 142, 142, 149, 152, 155, 159, 157, 159, 161, 163, 165, 171, 180, 188, 197, 207, 212, 221, 221, 224, 227, 229, 232, 234, 237, 240, 243, 243, 249, 252, 254, 258, 256, 258, 260, 261, 263, 269, 278, 286, 295, 305, 312, 322, 322, 325, 329, 331, 334, 336, 339, 343, 346, 346, 352, 355, 358, 362, 360 };
 
-            temp1 = new int[] { 100, 360 };
-            newSteps = StepMaker.MakeSteps(temp1, new CosineNoise());
-            Debug.Assert(temp.Count == newSteps.Count);
-            for (int i = 0; i < temp.Count; i++)
+            int[] temp11 = new int[] { 100, 360 };
+            var vnewSteps = StepMaker.MakeSteps(temp11, new CosineNoise());
+            Debug.Assert(vtemp.Count == vnewSteps.Count);
+            for (int i = 0; i < vtemp.Count; i++)
             {
-                Debug.Assert(temp[i] == newSteps[i]);
+                Debug.Assert(vtemp[i] == vnewSteps[i]);
             }
-
-            
         }
     }
 }
