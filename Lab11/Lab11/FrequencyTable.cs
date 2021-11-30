@@ -36,11 +36,11 @@ namespace Lab11
 
             var frequencyTable = new List<Tuple<Tuple<int, int>, int>>(ranges.Count);
 
-            int tempsIndex = 0;
+            int indexOfList = 0;
             for (int i = 0; i < ranges.Count; ++i)
             {
                 int count = 0;
-                for (int j = tempsIndex; j < listOfData.Count; ++j)
+                for (int j = indexOfList; j < listOfData.Count; ++j)
                 {
                     if (listOfData[j] >= ranges[i].Item1 && listOfData[j] < ranges[i].Item2)
                     {
@@ -49,7 +49,7 @@ namespace Lab11
                     else
                     {
                         frequencyTable.Add(new Tuple<Tuple<int, int>, int>(ranges[i], count));
-                        tempsIndex = j;
+                        indexOfList = j;
                         break;
                     }
 
