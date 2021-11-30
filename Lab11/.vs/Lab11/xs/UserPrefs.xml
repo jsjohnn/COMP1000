@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{196A3121-BE2D-4BF3-83BA-48A57038CFCA}|Default">
+  <MonoDevelop.Ide.ItemProperties.Lab11 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab11/FrequencyTable.cs">
+    <Files>
+      <File FileName="Lab11/Program.cs" Line="19" Column="1" />
+      <File FileName="Lab11/FrequencyTable.cs" Line="63" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/donghwa/Desktop/COMP1000/Lab11/Lab11/FrequencyTable.cs" relfile="Lab11/FrequencyTable.cs" line="73" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

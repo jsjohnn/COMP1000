@@ -35,9 +35,9 @@
             {
                 for (int j = 0; j < size; ++j)
                 {
-                    if (i != j)
+                    if (i == j)
                     {
-                        identityMatrix[i, j] = 0;
+                        identityMatrix[i, j] = 1;
                     }
                     else
                     {
@@ -45,7 +45,6 @@
                     }
                 }
             }
-
             return identityMatrix;
         }
 
@@ -89,8 +88,8 @@
             {
                 return null;
             }
-            int[] product = new int[matrix.GetLength(0)];
 
+            int[] product = new int[matrix.GetLength(0)];
             for (int i = 0; i < matrix.GetLength(0); ++i)
             {
                 int temp = 0;
@@ -120,7 +119,6 @@
             }
 
             int[,] product = new int[multiplicandMatrix.GetLength(0), multiplierMatrix.GetLength(1)];
-
             for (int i = 0; i < multiplicandMatrix.GetLength(0); ++i)
             {
                 for (int j = 0; j < multiplierMatrix.GetLength(1); ++j)
@@ -131,12 +129,9 @@
                         temp += multiplicandMatrix[i, k] * multiplierMatrix[k, j];
                     }
                     product[i, j] = temp;
-
                 }
             }
             return product;
-
         }
-
     }
 }
