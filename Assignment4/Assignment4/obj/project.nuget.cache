@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "P9eG5N2y7c1ia7MomU/T7x0r6zJjjmEjUTnbvK10/Obfd5vo9/eyIcN4ZFrJytXnqeZbR7Hm/+KXj61wab/bGQ==",
+  "dgSpecHash": "9i71ai1i9J53UQbmytvL5vN1+VKakPz83nL1z/GzlVka51HbyCd/pFEfdGxq83tqiuEH5hzhNAEC5p3crGwcrA==",
   "success": true,
   "projectFilePath": "/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/Assignment4.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/donghwa/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "/Users/donghwa/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

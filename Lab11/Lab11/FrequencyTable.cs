@@ -7,6 +7,8 @@ namespace Lab11
     {
         public static List<Tuple<Tuple<int, int>, int>> GetFrequencyTable(int[] data, int maxBinCount)
         {
+            // 최댓값, 최솟값 찾는거 분할정복 알고리듬으로 구해보기
+
             var listOfData = new List<int>(data);
             listOfData.Sort();
 

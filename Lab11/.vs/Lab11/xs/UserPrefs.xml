@@ -2,16 +2,24 @@
   <MonoDevelop.Ide.ItemProperties.Lab11 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Lab11/FrequencyTable.cs">
     <Files>
-      <File FileName="Lab11/Program.cs" Line="19" Column="1" />
-      <File FileName="Lab11/FrequencyTable.cs" Line="63" Column="1" />
+      <File FileName="Lab11/Program.cs" Line="19" Column="56" />
+      <File FileName="Lab11/FrequencyTable.cs" Line="27" Column="14" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>temps</Value>
+          <Value>ranges</Value>
+          <Value>countForTuple</Value>
+          <Value>frequencyTable</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/donghwa/Desktop/COMP1000/Lab11/Lab11/FrequencyTable.cs" relfile="Lab11/FrequencyTable.cs" line="73" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

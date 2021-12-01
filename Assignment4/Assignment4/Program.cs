@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace Assignment4
 {
@@ -6,18 +10,16 @@ namespace Assignment4
     {
         static void Main(string[] args)
         {
-            double[] arr1 = new double[] { 10.0, 50.0, 60.0, 10.0, 20.0, 40.0, 30.0 };
-            double[] arr2 = new double[] { 1 / 3.0, 2 / 3.0, 1.0 };
-
-            double hValues = 0;
-            double addValues = 0.0;
-
-            for (int i = 0; i < arr2.Length; ++i)
+            using (FileStream fs = File.OpenRead("/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/earth.png"))
+            using (Bitmap image = new Bitmap(fs))
+            using (Bitmap newImage = SignalProcessor.ConvolveImage(image, new double[,] {
+                    { 1 / 9.0, 1 / 9.0, 1 / 9.0 },
+                    { 1 / 9.0, 1 / 9.0, 1 / 9.0 },
+                    { 1 / 9.0, 1 / 9.0, 1 / 9.0 }
+                   }))
             {
-                addValues += arr2[i] * arr1[(int)(hValues - i + (arr2.Length - 1) / 2)];
+                newImage.Save("image_box_filtered.png", ImageFormat.Png); // 결과를 image_box_filtered.png 파일에 저장
             }
-                Console.WriteLine(addValues);
-            
         }
     }
 }
