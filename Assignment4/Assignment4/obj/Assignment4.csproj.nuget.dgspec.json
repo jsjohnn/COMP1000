@@ -14,7 +14,7 @@
         "outputPath": "/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/donghwa/.config/NuGet/NuGet.Config"
+          "/Users/donghwa/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -41,6 +41,10 @@
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "runtime.osx.10.10-x64.CoreCompat.System.Drawing": {
+              "target": "Package",
+              "version": "[6.0.5.128, )"
             }
           },
           "imports": [
