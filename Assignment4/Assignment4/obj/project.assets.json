@@ -264,7 +264,7 @@
       "outputPath": "/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/donghwa/.nuget/NuGet/NuGet.Config"
+        "/Users/donghwa/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
