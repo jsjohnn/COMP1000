@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "sKbtAGKbYg10zYr61OuMkyus3U2pjZZ87ATBmeG2HNIDj1rsMz1CetAGDoKbn0XMk0RX44rD1cwyadZeoLR/YA==",
+  "dgSpecHash": "motM4SYBFEDPpIzUUhRRh0k2alyeKbjGLFRvqpSNoLWFlyz96dmNSnHD+XHmhE9UGvnA1BuESzXLuyNYXZqXtg==",
   "success": true,
   "projectFilePath": "/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/Assignment4.csproj",
   "expectedPackageFiles": [
-    "/Users/donghwa/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "/Users/donghwa/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/Users/donghwa/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "/Users/donghwa/.nuget/packages/runtime.osx.10.10-x64.corecompat.system.drawing/6.0.5.128/runtime.osx.10.10-x64.corecompat.system.drawing.6.0.5.128.nupkg.sha512",
-    "/Users/donghwa/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512"
+    "/Users/donghwa/.nuget/packages/system.drawing.common/5.0.3/system.drawing.common.5.0.3.nupkg.sha512"
   ],
   "logs": []
 }

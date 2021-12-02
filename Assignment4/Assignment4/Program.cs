@@ -1,29 +1,55 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
 
 namespace Assignment4
 {
-    class Program
+    public sealed class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Bitmap bitmap = new Bitmap(File.OpenRead("earth.png"));
+            Bitmap tempMap = new Bitmap(6, 5);
+
+            Console.WriteLine("입력값");
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    Color tempMapColor = Color.FromArgb(i, j, i + j); // 증가하는 반복문 값으로 rgb값을 설정했습니다. 원하신다면 직접 값을 설정하세요
+                    tempMap.SetPixel(j, i, tempMapColor);
+                    Console.Write($"{{{tempMapColor.R:D3},{tempMapColor.G:D3},{tempMapColor.B:D3}}} ");
+                }
+                Console.WriteLine();
+            }
+
+            double[,] tempFilter = { { 0, 1, 0 }, { 0, 0, 0 }, { 0, 0, 0 } }; // 원하는 필터를 사용하세요
+                                                                              // {{0,0,0},{0,1,0},{0,0,0} 값을 그대로 나오게 해주는 필터
+                                                                              // {{0,0,0},{0,0,0},{0,1,0}} 아래로 한 칸 이동
+                                                                              // {{0,1,0},{0,0,0},{0,0,0}} 위로 한 칸 이동
+
+            Console.WriteLine("\n필터");
+            for (int i = 0; i < tempFilter.GetLength(0); i++)
+            {
+                Console.Write("{ ");
+                for (int j = 0; j < tempFilter.GetLength(1); j++)
+                {
+                    Console.Write($"{tempFilter[i, j]}, ");
+                }
+                Console.WriteLine("}");
+            }
+
+            Bitmap result = SignalProcessor.ConvolveImage(tempMap, tempFilter);
 
 
-
-            //using (FileStream fs = File.OpenRead("/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/earth.png"))
-            //using (Bitmap image = new Bitmap(fs))
-            //using (Bitmap newImage = SignalProcessor.ConvolveImage(image, new double[,] {
-            //        { 1 / 9.0, 1 / 9.0, 1 / 9.0 },
-            //        { 1 / 9.0, 1 / 9.0, 1 / 9.0 },
-            //        { 1 / 9.0, 1 / 9.0, 1 / 9.0 }
-            //       }))
-            //{
-            //    newImage.Save("image_box_filtered.png", ImageFormat.Png); // 결과를 image_box_filtered.png 파일에 저장
-            //}
+            Console.WriteLine("\n출력값");
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    Color resultColor = result.GetPixel(j, i);
+                    Console.Write($"{{{resultColor.R:D3},{resultColor.G:D3},{resultColor.B:D3}}} ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

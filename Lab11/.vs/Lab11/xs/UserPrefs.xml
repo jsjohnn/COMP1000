@@ -3,9 +3,18 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Lab11/FrequencyTable.cs">
     <Files>
       <File FileName="Lab11/Program.cs" Line="19" Column="56" />
-      <File FileName="Lab11/FrequencyTable.cs" Line="27" Column="14" />
+      <File FileName="Lab11/FrequencyTable.cs" Line="49" Column="22" />
     </Files>
     <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Lab11" expanded="True">
+            <Node name="Lab11" expanded="True">
+              <Node name="FrequencyTable.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
           <Value>temps</Value>

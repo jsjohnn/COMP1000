@@ -18,12 +18,8 @@
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/obj/Debug/net5.0/Assignment4.genruntimeconfig.cache
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/Microsoft.Win32.SystemEvents.dll
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/System.Drawing.Common.dll
-/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
-/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.dll
-/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.dll
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/obj/Debug/net5.0/Assignment4.csproj.CopyComplete
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/obj/Debug/net5.0/Assignment4.csproj.AssemblyReference.cache
-/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/Assignment4
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtime.osx.10.10-x64.CoreCompat.System.Drawing.dll
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/osx-x64/native/libX11.6.dylib
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/osx-x64/native/libXau.6.dylib
@@ -46,3 +42,6 @@
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/osx-x64/native/libxcb-render.0.dylib
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/osx-x64/native/libxcb-shm.0.dylib
 /Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/osx-x64/native/libxcb.1.dylib
+/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/donghwa/Desktop/COMP1000/Assignment4/Assignment4/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
