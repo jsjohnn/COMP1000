@@ -146,30 +146,30 @@ namespace Assignment4
         }
 
         //나중에 삭제
-        public static double[,] Convolve2D(double[,] signal, double[,] filter)
-        {
-            var convolved2D = new double[signal.GetLength(0), signal.GetLength(1)];
+        //public static double[,] Convolve2D(double[,] signal, double[,] filter)
+        //{
+        //    var convolved2D = new double[signal.GetLength(0), signal.GetLength(1)];
 
-            for (int x = 0; x < signal.GetLength(0); ++x)
-            {
-                for (int y = 0; y < signal.GetLength(1); ++y)
-                {
-                    for (int i = 0; i < filter.GetLength(0); ++i)
-                    {
-                        for (int j = 0; j < filter.GetLength(0); ++j)
-                        {
-                            if (x - j + (filter.GetLength(0) - 1) / 2 >= 0 && x - j + (filter.GetLength(0) - 1) / 2 < signal.GetLength(0)
-                                && y - i + (filter.GetLength(0) - 1) / 2 >= 0 && y - i + (filter.GetLength(0) - 1) / 2 < signal.GetLength(1))
-                            {
-                                convolved2D[x, y] += filter[j, i] * signal[x - j + (filter.GetLength(0) - 1) / 2, y - i + (filter.GetLength(0) - 1) / 2];
-                            }
-                        }
-                    }
+        //    for (int x = 0; x < signal.GetLength(0); ++x)
+        //    {
+        //        for (int y = 0; y < signal.GetLength(1); ++y)
+        //        {
+        //            for (int i = 0; i < filter.GetLength(0); ++i)
+        //            {
+        //                for (int j = 0; j < filter.GetLength(0); ++j)
+        //                {
+        //                    if (x - j + (filter.GetLength(0) - 1) / 2 >= 0 && x - j + (filter.GetLength(0) - 1) / 2 < signal.GetLength(0)
+        //                        && y - i + (filter.GetLength(0) - 1) / 2 >= 0 && y - i + (filter.GetLength(0) - 1) / 2 < signal.GetLength(1))
+        //                    {
+        //                        convolved2D[x, y] += filter[j, i] * signal[x - j + (filter.GetLength(0) - 1) / 2, y - i + (filter.GetLength(0) - 1) / 2];
+        //                    }
+        //                }
+        //            }
 
-                }
-            }
+        //        }
+        //    }
 
-            return convolved2D;
+        //    return convolved2D;
 
         }
     }

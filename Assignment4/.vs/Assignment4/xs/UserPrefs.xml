@@ -1,23 +1,29 @@
 ﻿<Properties StartupConfiguration="{B0C34F33-41CB-43CD-AEFB-5C9509B7543F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4/RgbColor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4/SignalProcessor.cs">
     <Files>
-      <File FileName="Assignment4/Program.cs" Line="52" Column="1" />
-      <File FileName="Assignment4/SignalProcessor.cs" Line="72" Column="1" />
-      <File FileName="Assignment4/RgbColor.cs" Line="5" Column="6" />
+      <File FileName="Assignment4/Program.cs" Line="232" Column="2" />
+      <File FileName="Assignment4/SignalProcessor.cs" Line="18" Column="47" />
+      <File FileName="Assignment4/RgbColor.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Assignment4" expanded="True">
             <Node name="Assignment4" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="RgbColor.cs" selected="True" />
+              <Node name="SignalProcessor.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>expectedColor.R</Value>
+          <Value>color.R</Value>
+          <Value>(int)expectedColor.G</Value>
+          <Value>(int)color.G</Value>
+          <Value>(int)expectedColor.B</Value>
+          <Value>(int)color.B</Value>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
