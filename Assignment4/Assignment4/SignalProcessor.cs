@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Collections.Generic;
 
 namespace Assignment4
 {
@@ -11,16 +7,15 @@ namespace Assignment4
     {
         public static double[] GetGaussianFilter1D(double sigma)
         {
-            int lengthOfGaussianFilter1D = (int)(sigma * 6 + 0.9);
-            //int lengthOfGaussianFilter1D = (int)Math.Ceiling(sigma * 6);
+            int filterLength = (int)Math.Ceiling(sigma * 6);
 
-            if (lengthOfGaussianFilter1D % 2 == 0)
+            if (filterLength % 2 == 0)
             {
-                lengthOfGaussianFilter1D += 1;
+                filterLength += 1;
             }
 
-            var gaussianFilter1D = new double[lengthOfGaussianFilter1D];
-            int midIndex = (int)(lengthOfGaussianFilter1D / 2 + 0.5);
+            var gaussianFilter1D = new double[filterLength];
+            int midIndex = (int)(filterLength / 2 + 0.5);
 
             for (int i = 0; i < gaussianFilter1D.Length; ++i)
             {
@@ -47,16 +42,15 @@ namespace Assignment4
 
         public static double[,] GetGaussianFilter2D(double sigma)
         {
-            int lengthOfGaussianFilter2D = (int)(sigma * 6 + 0.5);
-            //int lengthOfGaussianFilter2D = (int)Math.Ceiling(sigma * 6);
+            int filterLength = (int)Math.Ceiling(sigma * 6);
 
-            if (lengthOfGaussianFilter2D % 2 == 0)
+            if (filterLength % 2 == 0)
             {
-                lengthOfGaussianFilter2D += 1;
+                filterLength += 1;
             }
 
-            var gaussianFilter2D = new double[lengthOfGaussianFilter2D, lengthOfGaussianFilter2D];
-            int midIndex = (int)(lengthOfGaussianFilter2D / 2 + 0.5);
+            var gaussianFilter2D = new double[filterLength, filterLength];
+            int midIndex = (int)(filterLength / 2 + 0.5);
 
             for (int i = 0; i < gaussianFilter2D.GetLength(0); ++i)
             {
@@ -70,7 +64,7 @@ namespace Assignment4
 
         public static Bitmap ConvolveImage(Bitmap bitmap, double[,] filter)
         {
-            Bitmap newBitmap = new Bitmap(bitmap.Width, bitmap.Height);
+            Bitmap output = new Bitmap(bitmap.Width, bitmap.Height);
 
             RgbColor[,] input = new RgbColor[bitmap.Width, bitmap.Height];
 
@@ -99,18 +93,9 @@ namespace Assignment4
                             if (x - j + (lengthOfFilter - 1) / 2 >= 0 && x - j + (lengthOfFilter - 1) / 2 < input.GetLength(0)
                                 && y - i + (lengthOfFilter - 1) / 2 >= 0 && y - i + (lengthOfFilter - 1) / 2 < input.GetLength(1))
                             {
-
                                 red += filter[i, j] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Red;
                                 green += filter[i, j] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Green;
                                 blue += filter[i, j] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Blue;
-
-                                //red += filter[j, i] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Red;
-                                //green += filter[j, i] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Green;
-                                //blue += filter[j, i] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Blue;
-
-                                //red += (int)(filter[j, i] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Red);
-                                //green += (int)(filter[j, i] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Green);
-                                //blue += (int)(filter[j, i] * input[x - j + (lengthOfFilter - 1) / 2, y - i + (lengthOfFilter - 1) / 2].Blue);
                             }
                         }
                     }
@@ -142,40 +127,11 @@ namespace Assignment4
                         blue = byte.MinValue;
                     }
 
-                    //bitmap.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
-                    newBitmap.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
+                    output.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
                 }
             }
 
-            return newBitmap;
+            return output;
         }
-
-        //나중에 삭제
-        //public static double[,] Convolve2D(double[,] signal, double[,] filter)
-        //{
-        //    var convolved2D = new double[signal.GetLength(0), signal.GetLength(1)];
-
-        //    for (int x = 0; x < signal.GetLength(0); ++x)
-        //    {
-        //        for (int y = 0; y < signal.GetLength(1); ++y)
-        //        {
-        //            for (int i = 0; i < filter.GetLength(0); ++i)
-        //            {
-        //                for (int j = 0; j < filter.GetLength(0); ++j)
-        //                {
-        //                    if (x - j + (filter.GetLength(0) - 1) / 2 >= 0 && x - j + (filter.GetLength(0) - 1) / 2 < signal.GetLength(0)
-        //                        && y - i + (filter.GetLength(0) - 1) / 2 >= 0 && y - i + (filter.GetLength(0) - 1) / 2 < signal.GetLength(1))
-        //                    {
-        //                        convolved2D[x, y] += filter[j, i] * signal[x - j + (filter.GetLength(0) - 1) / 2, y - i + (filter.GetLength(0) - 1) / 2];
-        //                    }
-        //                }
-        //            }
-
-        //        }
-        //    }
-
-        //    return convolved2D;
-
-        //}
     }
 }
