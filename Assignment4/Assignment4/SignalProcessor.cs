@@ -70,6 +70,8 @@ namespace Assignment4
 
         public static Bitmap ConvolveImage(Bitmap bitmap, double[,] filter)
         {
+            Bitmap newBitmap = new Bitmap(bitmap.Width, bitmap.Height);
+
             RgbColor[,] input = new RgbColor[bitmap.Width, bitmap.Height];
 
             for (int i = 0; i < input.GetLength(0); ++i)
@@ -140,11 +142,12 @@ namespace Assignment4
                         blue = byte.MinValue;
                     }
 
-                    bitmap.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
+                    //bitmap.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
+                    newBitmap.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
                 }
             }
 
-            return bitmap;
+            return newBitmap;
         }
 
         //나중에 삭제
