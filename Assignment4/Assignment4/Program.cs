@@ -119,7 +119,7 @@ namespace Assignment4
                     { 1 / 9.0, 1 / 9.0, 1 / 9.0 }
                 }))
             {
-                newImage.Save($"{Path.GetFileNameWithoutExtension(IMAGE_FILE_NAME)}_box.png", ImageFormat.Png);
+                newImage.Save($"{Path.GetFileNameWithoutExtension(IMAGE_FILE_NAME)}_eeeeeeeeeebox.png", ImageFormat.Png);
                 assertBitmapEqual(expected, newImage, 1);
             }
 
