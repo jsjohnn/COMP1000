@@ -9,7 +9,7 @@ namespace Assignment4
     public sealed class Program
     {
         public static void Main(string[] args)
-        {
+        {            
             const int ONED_SIGNAL_SIZE = 100;
             const int NOISE_POINTS_COUNT = 50;
             const string IMAGE_FILE_NAME = "earth.png";

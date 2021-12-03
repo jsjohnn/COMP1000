@@ -11,7 +11,7 @@ namespace Assignment4
     {
         public static double[] GetGaussianFilter1D(double sigma)
         {
-            int lengthOfGaussianFilter1D = (int)(sigma * 6);
+            int lengthOfGaussianFilter1D = (int)Math.Ceiling(sigma * 6);
 
             if (lengthOfGaussianFilter1D % 2 == 0)
             {
@@ -46,7 +46,7 @@ namespace Assignment4
 
         public static double[,] GetGaussianFilter2D(double sigma)
         {
-            int lengthOfGaussianFilter2D = (int)(sigma * 6);
+            int lengthOfGaussianFilter2D = (int)Math.Ceiling(sigma * 6);
 
             if (lengthOfGaussianFilter2D % 2 == 0)
             {
