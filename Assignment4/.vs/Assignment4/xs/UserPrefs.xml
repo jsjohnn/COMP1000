@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{B0C34F33-41CB-43CD-AEFB-5C9509B7543F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4/SignalProcessor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment4/RgbColor.cs">
     <Files>
-      <File FileName="Assignment4/Program.cs" Line="232" Column="2" />
-      <File FileName="Assignment4/SignalProcessor.cs" Line="18" Column="47" />
-      <File FileName="Assignment4/RgbColor.cs" />
+      <File FileName="Assignment4/Program.cs" Line="192" Column="14" />
+      <File FileName="Assignment4/SignalProcessor.cs" Line="6" Column="40" />
+      <File FileName="Assignment4/RgbColor.cs" Line="12" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Assignment4" expanded="True">
             <Node name="Assignment4" expanded="True">
-              <Node name="SignalProcessor.cs" selected="True" />
+              <Node name="RgbColor.cs" selected="True" />
             </Node>
           </Node>
         </State>

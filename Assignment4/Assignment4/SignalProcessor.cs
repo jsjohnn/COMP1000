@@ -21,6 +21,7 @@ namespace Assignment4
             {
                 gaussianFilter1D[i] = 1 / (sigma * Math.Sqrt(2 * Math.PI)) * Math.Exp(-Math.Pow(Math.Abs(i - midIndex), 2) / (2 * Math.Pow(sigma, 2)));
             }
+
             return gaussianFilter1D;
         }
 
@@ -37,6 +38,7 @@ namespace Assignment4
                     }
                 }
             }
+
             return convolved1D;
         }
 
@@ -59,6 +61,7 @@ namespace Assignment4
                     gaussianFilter2D[i, j] = 1 / (2 * Math.PI * Math.Pow(sigma, 2)) * Math.Exp(-(Math.Pow(Math.Abs(i - midIndex), 2) + Math.Pow(Math.Abs(j - midIndex), 2)) / (2 * Math.Pow(sigma, 2)));
                 }
             }
+
             return gaussianFilter2D;
         }
 
@@ -66,13 +69,13 @@ namespace Assignment4
         {
             Bitmap output = new Bitmap(bitmap.Width, bitmap.Height);
 
-            Rgb[,] input = new Rgb[bitmap.Width, bitmap.Height];
+            RgbColor[,] input = new RgbColor[bitmap.Width, bitmap.Height];
 
             for (int i = 0; i < input.GetLength(0); ++i)
             {
                 for (int j = 0; j < input.GetLength(1); ++j)
                 {
-                    input[i, j] = new Rgb(bitmap.GetPixel(i, j));
+                    input[i, j] = new RgbColor(bitmap.GetPixel(i, j));
                 }
             }
 
@@ -104,33 +107,20 @@ namespace Assignment4
                     {
                         red = byte.MaxValue;
                     }
-                    //else if (red < byte.MinValue)
-                    //{
-                    //    red = byte.MinValue;
-                    //}
 
                     if (green > byte.MaxValue)
                     {
                         green = byte.MaxValue;
                     }
-                    //else if (green < byte.MinValue)
-                    //{
-                    //    green = byte.MinValue;
-                    //}
 
                     if (blue > byte.MaxValue)
                     {
                         blue = byte.MaxValue;
                     }
-                    //else if (blue < byte.MinValue)
-                    //{
-                    //    blue = byte.MinValue;
-                    //}
 
                     output.SetPixel(x, y, Color.FromArgb((byte)red, (byte)green, (byte)blue));
                 }
             }
-            
             return output;
         }
     }

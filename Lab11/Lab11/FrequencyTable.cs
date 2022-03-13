@@ -7,12 +7,11 @@ namespace Lab11
     {
         public static List<Tuple<Tuple<int, int>, int>> GetFrequencyTable(int[] data, int maxBinCount)
         {
-            // 최댓값, 최솟값 찾는거 분할정복 알고리듬으로 구해보기
-            var listOfData = new List<int>(data);
-            listOfData.Sort();
+            var dataList = new List<int>(data);
+            dataList.Sort();
 
-            int minValue = listOfData[0];
-            int maxValue = listOfData[listOfData.Count - 1];
+            int minValue = dataList[0];
+            int maxValue = dataList[dataList.Count - 1];
             int binWidth = (int)Math.Round((maxValue - minValue) / (double)maxBinCount);
 
             if (binWidth < 1)
@@ -41,9 +40,9 @@ namespace Lab11
             for (int i = 0; i < ranges.Count; ++i)
             {
                 int count = 0;
-                for (int j = indexOfList; j < listOfData.Count; ++j)
+                for (int j = indexOfList; j < dataList.Count; ++j)
                 {
-                    if (listOfData[j] >= ranges[i].Item1 && listOfData[j] < ranges[i].Item2)
+                    if (dataList[j] >= ranges[i].Item1 && dataList[j] < ranges[i].Item2)
                     {
                         count += 1;
                     }
@@ -54,13 +53,14 @@ namespace Lab11
                         break;
                     }
 
-                    if (j == listOfData.Count - 1)
+                    if (j == dataList.Count - 1)
                     {
                         frequencyTable.Add(new Tuple<Tuple<int, int>, int>(ranges[i], count));
                         break;
                     }
                 }
             }
+
             return frequencyTable;
         }
     }
